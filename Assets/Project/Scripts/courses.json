@@ -1,0 +1,15 @@
+{"programs": 
+    [
+        {"name": "1109BIT",
+         "Majors":  
+            [
+                {"name":"Computing and Intelligent Systems"},
+            	{"name":"Core"},
+            	{"name":"Inform,ation Technology Management and Marketing"},
+            	{"name":"Multimedia"},
+            	{"name":"Software Dev,elopment"},
+            	{"name":"System Services"}
+            ]    
+        }
+    ]
+}
