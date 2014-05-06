@@ -46,10 +46,14 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Project\Scripts\CarScript.cs" />
-     <Compile Include="Assets\Project\Scripts\SmoothFollow.cs" />
-     <Compile Include="Assets\Project\Scripts\WaypointController.cs" />
-     <Compile Include="Assets\Project\Scripts\Waypont.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\ArrowController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\GUIController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\GameController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\WaypointController.cs" />
+     <Compile Include="Assets\Project\Scripts\Extensions\SimpleJSON.cs" />
+     <Compile Include="Assets\Project\Scripts\Extensions\SmoothFollow.cs" />
+     <Compile Include="Assets\Project\Scripts\ObjectScripts\CarScript.cs" />
+     <Compile Include="Assets\Project\Scripts\ObjectScripts\Waypoint.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">

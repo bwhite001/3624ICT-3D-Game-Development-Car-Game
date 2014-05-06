@@ -46,8 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Project\Scripts\SmoothFollow.js" />
+     <Compile Include="Assets\Project\Scripts\Programs.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
