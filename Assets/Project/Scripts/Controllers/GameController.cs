@@ -1,15 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
+using SimpleJSON;
 
 public class GameController : MonoBehaviour {
 
 	private WaypointController waypointController;
 	private GUIController guiController;
 	private ArrowController arrowController;
+	private JSONController jsonController;
+
+	private JSONNode CurrentProgram;
 
 	void Start()
 	{
-		instantiateControllers ();
+		if (ProgramObjectController.program == null) 
+		{
+			Debug.LogError("Program Not Defined!");
+			Debug.Break();
+			Application.Quit();
+		}
+		else
+			instantiateControllers ();
+
 	}
 
 	void Update()
@@ -18,9 +30,6 @@ public class GameController : MonoBehaviour {
 		Waypoint waypoint = waypointController.getSelectedWaypoint();
 		
 		guiController.newLocation (waypoint.waypointName);
-
-
-
 
 	}
 
@@ -31,8 +40,9 @@ public class GameController : MonoBehaviour {
 		waypointController.SendMessage ("selectWaypoint");
 
 		guiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<GUIController>();
-	}
 
+		guiController.setProgram (ProgramObjectController.getProgramCode());
+	}
 
 
 }

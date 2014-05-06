@@ -49,12 +49,16 @@
      <Compile Include="Assets\Project\Scripts\Controllers\ArrowController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\GUIController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\GameController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\JSONController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\ProgramObjectController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\WaypointController.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\SimpleJSON.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\SmoothFollow.cs" />
+     <Compile Include="Assets\Project\Scripts\Menus\ProgramListMenu.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\CarScript.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\Waypoint.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Resources\programs.txt" />
      <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

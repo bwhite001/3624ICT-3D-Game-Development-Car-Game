@@ -8,25 +8,24 @@ public class WaypointController : MonoBehaviour {
 
 	public int ammount = 35;
 
-	public int selectedWaypointIndex;
+	private int selectedWaypointIndex;
 
 	public float largest = 500f;
 
-	private string[] WaypontNames = {"Melazzo","Baden","Xhoris","Tuscaloosa","Saarbrï¿½cken","Marbella","Tuglie",
-	                                 "Grezzana","Purmerend","Spokane","Barddhaman","Charleroi","Balclutha","Schiltigheim",
-	                                 "Oppido Mamertina","Chï¿½tillon","Pont-Saint-Martin","Salt Lake City","Calestano",
-	                                 "Sogliano Cavour","North Barrackpur","Hope","Santu Lussurgiu","Vellore",
-	                                 "San Giovanni Suergiu","Andernach","Moncton","Eghezee","Saint-Martin","Barrhead",
-	                                 "Schoonaarde","Pastena","Calvera","Elgin","Georgia","Rodengo/Rodeneck","Erpion",
-	                                 "Tirunelveli","Bon Accord","Gwalior","Narcao","Flï¿½nu","Bearberry","Saint-Gï¿½ry",
-	                                 "Jonquiï¿½re","Parbhani","Broxburn","Hay River","Joondalup","Wellington",
-	                                 "Jerez de la Frontera","Kitscoty","Dindigul","Abingdon","Melle","Pickering",
-	                                 "Pomarico","Bionaz","Essex","New Westminster","Biloxi","Limal","Alexandria",
-	                                 "Alness","Bargagli","Subbiano","Ujjain","Rigolet","Coalhurst","Newport","Rotorua",
-	                                 "Sant'Agapito","Milnathort","Cercepiccola","Busso","Cascavel","Hannover","Cercemaggiore",
-	                                 "Castel Ritaldi","Mellery","Tufara","Montague","Blumenau","Cisterna di Latina","Marcq-en-Baroeul",
-	                                 "Campagna","Nobressart","Caprino Bergamasco","Karlsruhe","Isnes","Rosciano","Levallois-Perret",
-									 "Frauenkirchen","Tarsia","Mellet","Wha Ti","Santa Cruz de Tenerife","Penhold","Lamontzï¿½e","Nelson"};
+	private string[] WaypontNames = {"G01 Business 1","G02 Clinical Sciences 1","G03 Lecture Theatres 1 & 2",
+		"G04 Services","G05 Health Sciences","G06 Business 3","G07 The Link","G08 Flammable Liquid Store",
+		"G09 Engineering","G10 Library (Graham Jones Centre)","G11 Learning Commons","G12 Science 2",
+		"G13 Multi Storey Carpark 1","G14 Visual Arts","G16 Clinical Sciences 2",
+		"G17 Lecture Theatres 3 & 4","G19 Facilities Management",
+		"G20 Chiller House 1","G21 Chiller House 2","G22 Chiller House 3",
+		"G23 Multimedia","G24 Science 1","G25 Glycomics 2","G26 Glycomics 1",
+		"G27 Business 2","G28 Kiosk","G29 Chiller House 4","G30 Arts & Education 1",
+		"G31 Arts & Education 2","G32 The Pavilion","G33 Student Centre","G34 The Chancellery",
+		"G35 Griffith University Bridge","G36 Law","G37 Chiller House 5","G38 Chiller House 6",
+		"G39 Science, Engineering and Architecture","G40 Griffith Health Centre",
+		"G42 Griffith Business School","G51 Smart Water Research Centre","G52 International Building",
+		"G53 Chiller House 7","G54 End of Trip Facility","G55 Multi Storey Carpark 2 (proposed)",
+		"GT2 Coastal Management"};
 
 	void createWaypoints (int ammount)
 	{
@@ -40,7 +39,7 @@ public class WaypointController : MonoBehaviour {
 			//set all waypoints to not selected
 			temp.selected = false;
 
-			int index = (int)Random.Range (0,99);
+			int index = (int)Random.Range (0,WaypontNames.Length-1);
 			string tmpName = WaypontNames[index];
 
 			temp.waypointName = tmpName;
@@ -72,7 +71,12 @@ public class WaypointController : MonoBehaviour {
 		GameObject.FindGameObjectWithTag ("ArrowController").SendMessage ("changeTarget", waypoints [selectedWaypointIndex].transform);
 
 	}
-	
+
+	void getCloseWaypoints()
+	{
+
+	}
+
 	public Waypoint getSelectedWaypoint()
 	{
 		return waypoints [selectedWaypointIndex];
