@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: fc1c7373bd189424db3cb8510ae98d5f
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - waypointPrefab: {fileID: 11400000, guid: 6f239f8319932482dac9a95a9bea526a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
