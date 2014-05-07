@@ -1,0 +1,398 @@
+[
+    {
+        "code":"1109BIT",
+        "name":"Bachelor of Information Technology",
+        "coreCourses": 
+        [
+            {"year":"1","code":"1012ICT","name":"Communications for ICT"},
+            {"year":"1","code":"1621ICT","name":"Web Design and Development"},
+            {"year":"1","code":"1004ICT","name":"Foundations of Computing Systems"},
+            {"year":"1","code":"1001ICT","name":"Introduction to Programming"},
+            {"year":"1","code":"1005ICT","name":"Object Oriented Programming"},
+            {"year":"1","code":"1410ICT","name":"Introduction to Information Systems"},
+            {"year":"1","code":"1612ICT","name":"Interactive Applications Development"},
+            {"year":"1","code":"1007ICT","name":"Computer Systems and Networks"},
+            {"year":"2","code":"2004ICT","name":"System Analysis and Design"},
+            {"year":"2","code":"2002ICT","name":"Database Design"},
+            {"year":"2","code":"2001ICT","name":"Project Management"},
+            {"year":"3","code":"3410ICT","name":"Professional Issues in Information Technology"},
+            {"year":"3","code":"3001ICT","name":"Industry Project PART 1"},
+            {"year":"3","code":"3001ICT","name":"Industry Project PART 2"}
+        ],
+        "majors":
+        [
+            {"name":"System Services",
+            "courses":
+            [
+                {"year":"3","code":"3612ICT","name":"Database Systems and Administration PART 1"},
+                {"year":"3","code":"3612ICT","name":"Database Systems and Administration PART 2"},
+                {"year":"3","code":"3413ICT","name":"Network Security PART 1"},
+                {"year":"3","code":"3413ICT","name":"Network Security PART 2"},
+                {"year":"3","code":"3623ICT","name":"Information and Content Management"},
+                {"year":"2","code":"2506ICT","name":"Computer Networks and Security"},
+                {"year":"2","code":"2505ICT","name":"User Interface Design"},
+                {"year":"2","code":"2008EHR","name":"Business Communication"},
+                {"year":"3","code":"3612ICT","name":"Database Systems and Administration"},
+                {"year":"3","code":"3412ICT","name":"Software Architecture"}
+            ]},
+
+            {"name":"Information Technology Management and Marketing",
+            "courses":
+            [
+                {"year":"1","code":"1101IBA","name":"Management Concepts"},
+                {"year":"1","code":"1003MKT","name":"Introduction to Marketing"},
+                {"year":"3","code":"3144IBA","name":"Quality Management"},
+                {"year":"3","code":"3041MKT","name":"Entrepreneurship and New Business Venturing"},
+                {"year":"3","code":"3112IBA","name":"Management Strategy and Decision Making"},
+                {"year":"3","code":"3006IBA","name":"Business Ethics & Corporate Governance"},
+                {"year":"3","code":"3004IBA","name":"Inter-Cultural Management"},
+                {"year":"2","code":"2004MKT","name":"Consumer Psychology"},
+                {"year":"2","code":"2005EHR","name":"Organisational Behaviour"},
+                {"year":"2","code":"2029MKT","name":"Advertising and Creative Strategies"}
+            ]},
+
+            {"name":"Multimedia",
+            "courses":
+            [
+                {"year":"3","code":"3601ICT","name":"Professional Practice Portfolio"},
+                {"year":"3","code":"3723ICT","name":"Educational Design in Multimedia"},
+                {"year":"3","code":"3624ICT","name":"3D Game Development"},
+                {"year":"3","code":"3622ICT","name":"Dynamic Multimedia Systems"},
+                {"year":"2","code":"2505ICT","name":"User Interface Design"},
+                {"year":"3","code":"3020ICT","name":"Industry Affiliates Program (in Multimedia Production) PART 1"},
+                {"year":"3","code":"3020ICT","name":"Industry Affiliates Program (in Multimedia Production) PART2"},
+                {"year":"2","code":"2119GFS","name":"CGI Modelling"},
+                {"year":"2","code":"2601ICT","name":"Modelling and Animation Techniques"},
+                {"year":"1","code":"1611ICT","name":"Introduction to Multimedia"}
+            ]},
+
+            {"name":"Software Development",
+            "courses":
+            [
+                {"year":"3","code":"3420ICT","name":"Systems Programming PART 1"},
+                {"year":"3","code":"3420ICT","name":"Systems Programming PART 2"},
+                {"year":"3","code":"3407ICT","name":"Graphics Programming PART 1"},
+                {"year":"3","code":"3407ICT","name":"Graphics Programming PART 2"},
+                {"year":"3","code":"3412ICT","name":"Software Architecture"},
+                {"year":"2","code":"2509ICT","name":"Software Engineering"},
+                {"year":"2","code":"2503ICT","name":"Web Programming"},
+                {"year":"2","code":"2401ICT","name":"Data Structures and Algorithms"},
+                {"year":"2","code":"2513ICT","name":"Software Development Environments"},
+                {"year":"2","code":"2510ICT","name":"Software Quality Management"}
+            ]},
+
+            {"name":"Computing and Intelligent Systems",
+            "courses":
+            [
+                {"year":"2","code":"2402ICT","name":"Discrete Mathematics"},
+                {"year":"3","code":"3511ICT","name":"Machine Learning"},
+                {"year":"2","code":"2508ICT","name":"Principles of Intelligent System"},
+                {"year":"3","code":"3530ICT","name":"Scientific and Parallel Computing"},
+                {"year":"3","code":"3530ICT","name":"Scientific and Parallel Computing"},
+                {"year":"3","code":"3421ICT","name":"Multiagent Systems"},
+                {"year":"3","code":"3020ICT","name":"Industry Affiliates Program"},
+                {"year":"3","code":"3020ICT","name":"Industry Affiliates Program"},
+                {"year":"2","code":"2401ICT","name":"Data Structures and Algorithms"},
+                {"year":"2","code":"2513ICT","name":"Software Development Environments"}
+            ]}
+        ]
+    },
+    {
+        "code":"1110BMM",
+        "name":"Bachelor of Multimedia",
+        "coreCourses": 
+        [
+            {"code":"1611ICT","year":"1","name":"Introduction to Multimedia "},
+            {"code":"1621ICT","year":"1","name":"Web Design and Development"},
+            {"code":"1602QCA","year":"1","name":"Digital Visualisation"},
+            {"code":"1001ICT","year":"1","name":"Introduction to Programming"},
+            {"code":"1066QCM","year":"1","name":"Introduction to Music Programming and Production"},
+            {"code":"1611QCA","year":"1","name":"Digital Video: Introduction"},
+            {"code":"1612ICT","year":"1","name":"Interactive Applications Development "},
+            {"code":"2505ICT","year":"2","name":"User Interface Design"},
+            {"code":"2001ICT","year":"2","name":"Project Management"},
+            {"code":"3622ICT","year":"3","name":"Dynamic Multimedia Systems"},
+            {"code":"3001ICT","year":"3","name":"Industry Project (Part I)"},
+            {"code":"3001ICT","year":"3","name":"Industry Project (Part II)"},
+            {"code":"3410ICT","year":"3","name":"Professional Issues in Information Technology"},
+            {"code":"3723ICT","year":"3","name":"Educational Design in Multimedia "}
+        ],
+        "majors":
+        [
+            {"name":"Film and TV Production",
+            "courses":
+            [
+                {"code":"2651GFS","year":"2","name":"Principles of Screen Composition"},
+                {"code":"2612GFS","year":"2","name":"Video Documentary Production"},
+                {"code":"3603GFS","year":"3","name":"Script Development and Drama Production PART 1"},
+                {"code":"3603GFS","year":"3","name":"Script Development and Drama Production PART 2"},
+                {"code":"2127GFS","year":"2","name":"Post Production: Fundamentals"},
+                {"code":"2128GFS","year":"2","name":"Post Production: Integration"},
+                {"code":"2720GFS","year":"2","name":"Interactive Storytelling"},
+                {"code":"3654GFS","year":"3","name":"Production"},
+                {"code":"2719GFS","year":"2","name":"Documentary Scriptwriting"},
+                {"code":"3704GFS","year":"3","name":"Screen Distribution"}
+            ]},
+            {"name":"Internet Computing",
+            "courses":
+            [
+                {"code":"1005ICT","year":"1","name":"Object Oriented Programming"},
+                {"code":"1007ICT","year":"1","name":"Computer Systems and Networks"},
+                {"code":"2503ICT","year":"2","name":"Web Programming"},
+                {"code":"2002ICT","year":"2","name":"Database Design"},
+                {"code":"2501ICT","year":"2","name":"Programming Mobile Applications"},
+                {"code":"2401ICT","year":"2","name":"Data Structures and Algorithms"},
+                {"code":"2512ICT","year":"2","name":"eCommerce"},
+                {"code":"3612ICT","year":"3","name":"Database Systems and Administration PART 1"},
+                {"code":"3612ICT","year":"3","name":"Database Systems and Administration PART 2"},
+                {"code":"3412ICT","year":"3","name":"Software Architecture"}
+            ]},
+            {"name":"Digital Video",
+            "courses":
+            [
+                {"code":"2517HUM","year":"2","name":"Screen Production"},
+                {"code":"3526HUM","year":"3","name":"Advanced Screen Project"},
+                {"code":"2517HUM","year":"2","name":"Screen Production"},
+                {"code":"2108HUM","year":"2","name":"Writing for Performance"},
+                {"code":"2105HUM","year":"2","name":"Screenwriting"},
+                {"code":"2518HUM","year":"2","name":"Screen Business"},
+                {"code":"3508HUM","year":"3","name":"Documentary Studies"},
+                {"code":"3525HUM","year":"3","name":"Music Video Production"},
+                {"code":"3603QCA","year":"3","name":"Major Studio Project "},
+                {"code":"2612QCA","year":"2","name":"Typography for Screen "}
+            ]},
+            {"name":"Music Production and Programming",
+            "courses":
+            [
+                {"code":"3063QCM","year":"3","name":"Music Programming and Production"},
+                {"code":"2324QCM","year":"2","name":"Composing and Arranging"},
+                {"code":"3110QCM","year":"3","name":"Music Industry Studies"},
+                {"code":"2107QCM","year":"2","name":"Popular Music Countercultures"},
+                {"code":"2109QCM","year":"2","name":"Technology and Music "},
+                {"code":"2106QCM","year":"2","name":"Roots of Rock and Pop"},
+                {"code":"2108QCM","year":"2","name":"Popular World Musics"},
+                {"code":"3109QCM","year":"3","name":"Popular Classical Music"},
+                {"code":"1105QCM","year":"1","name":"Music, Mind and Brain"},
+                {"code":"3063QCM","year":"3","name":"Music Programming and Production"}
+            ]},
+            {"name":"Visual Media Design",
+            "courses":
+            [
+                {"code":"1610QCA","year":"1","name":"Graphic Design"},
+                {"code":"3603QCA","year":"3","name":"Major Studio Project PART 1 "},
+                {"code":"3603QCA","year":"3","name":"Major Studio Project PART 2"},
+                {"code":"2612QCA","year":"2","name":"Typography for Screen"},
+                {"code":"2616QCA","year":"2","name":"Games Design"},
+                {"code":"2572QCA","year":"2","name":"Introduction to 3D Design"},
+                {"code":"2613QCA","year":"2","name":"Graphic Design 2"},
+                {"code":"2604QCA","year":"2","name":"3D Digital Modelling for Manufacturing"},
+                {"code":"2601ICT","year":"2","name":"Modelling and Animation Techniques"},
+                {"code":"2002ICT","year":"2","name":"Database Design "}
+            ]}
+        ]
+    },
+    {
+        "code":"1034BBus",
+        "name":"Bachelor of Business",
+        "coreCourses": 
+        [
+            {"code":"1304AFE","year":"1","name":"Business Statistics"},
+            {"code":"1101IBA","year":"1","name":"Management Concepts"},
+            {"code":"1003MKT","year":"1","name":"Introduction to Marketing"},
+            {"code":"1008ICT","year":"1","name":"Business Informatics"},
+            {"code":"1303AFE","year":"1","name":"Economics for Decision Making"},
+            {"code":"1004GIR","year":"1","name":"Government-Business Relations"},
+            {"code":"1001EHR","year":"1","name":"Employment Relations"},
+            {"code":"1102AFE","year":"1","name":"Accounting for Decision Making"}
+        ],
+        "majors":
+        [
+            {"name":"Human Resource Management",
+            "courses":
+            [
+                {"code":"2002EHR","year":"2","name":"Human Resource Management Principles"},
+                {"code":"2005EHR","year":"2","name":"Organisational Behaviour"},
+                {"code":"1003MKT","year":"1","name":"Introduction to Marketing"},
+                {"code":"2009EHR","year":"2","name":"Recruitment and Selection"},
+                {"code":"3010EHR","year":"3","name":"Training and Development"},
+                {"code":"3011EHR","year":"3","name":"Performance Management"},
+                {"code":"3012EHR","year":"3","name":"Applied Human Resource Management"},
+                {"code":"2006EHR","year":"2","name":"Health and Safety in the Workplace"},
+                {"code":"2001EHR","year":"2","name":"Management Employee Relations"},
+                {"code":"2008EHR","year":"2","name":"Business Communication"},
+                {"code":"2004EHR","year":"2","name":"Employment Relations Law"},
+                {"code":"3009EHR","year":"3","name":"International Human Resource Management"},
+                {"code":"3033IBA","year":"3","name":"Managing People in the Global Economy"},
+                {"code":"3014EHR","year":"3","name":"Human Resource Management Work Experience"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 1"},
+                {"code":"3000GBS","year":"3","name":"UG Business Internship PART 2"}
+            ]},
+            {"name":"Marketing",
+            "courses":
+            [
+                {"code":"2004MKT","year":"2","name":"Consumer Psychology"},
+                {"code":"2034MKT","year":"2","name":"Market Research"},
+                {"code":"2029MKT","year":"2","name":"Advertising and Creative Strategies"},
+                {"code":"3042MKT","year":"3","name":"Marketing Globally"},
+                {"code":"3006MKT","year":"3","name":"Services Marketing"},
+                {"code":"3028MKT","year":"3","name":"Strategic Marketing"},
+                {"code":"2036MKT","year":"2","name":"Retail Marketing"},
+                {"code":"2002MKT","year":"2","name":"Corporate Communications and Public Relations"},
+                {"code":"3040MKT","year":"3","name":"Digital and Social Media Marketing"},
+                {"code":"3013MKT","year":"3","name":"Entertainment and the Arts Marketing"},
+                {"code":"3055MKT","year":"3","name":"Green Marketing"},
+                {"code":"3007MKT","year":"3","name":"Social Marketing: Applying Marketing for Social Change"},
+                {"code":"3041MKT","year":"3","name":"Entrepreneurship and New Business Venturing"},
+                {"code":"3019MKT","year":"3","name":"Franchising and Small Business"},
+                {"code":"3053MKT","year":"3","name":"Internship PART 1"},
+                {"code":"3053MKT","year":"3","name":"Internship PART 2"}
+            ]},
+            {"name":"Management",
+            "courses":
+            [
+                {"code":"2128IBA","year":"2","name":"Business Processes"},
+                {"code":"2005EHR","year":"2","name":"Organisational Behaviour"},
+                {"code":"3033IBA","year":"3","name":"Managing People in the Global Economy"},
+                {"code":"3112IBA","year":"3","name":"Management Strategy and Decision Making"},
+                {"code":"3006IBA","year":"3","name":"Business Ethics & Corporate Governance"},
+                {"code":"3114IBA","year":"3","name":"Management Problem Solving"},
+                {"code":"2008EHR","year":"2","name":"Business Communication"},
+                {"code":"2005IBA","year":"2","name":"Comparative Management"},
+                {"code":"2208HSL","year":"2","name":"International Food and Beverage Management"},
+                {"code":"Financi","year":"F","name":"l Management for Hospitality Decision Makers"},
+                {"code":"Managem","year":"M","name":"nt Strategy and Decision Making "},
+                {"code":"3155IBA","year":"3","name":"Operations Management"},
+                {"code":"3120HSL","year":"3","name":"Managing Culturally Diverse Workplaces"},
+                {"code":"3144IBA","year":"3","name":"Quality Management"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 1"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 2"}
+            ]},
+            {"name":"Logistics and Supply Network Management",
+            "courses":
+            [
+                {"code":"2150IBA","year":"2","name":"Introduction to Supply Chain Management"},
+                {"code":"2128IBA","year":"2","name":"Business Processes"},
+                {"code":"2154IBA","year":"2","name":"Business Logistics"},
+                {"code":"3155IBA","year":"3","name":"Operations Management"},
+                {"code":"3145IBA","year":"3","name":"Purchasing and Supply Management"},
+                {"code":"3156IBA","year":"3","name":"Applied Business Optimisation and Modelling"},
+                {"code":"2011IBA","year":"2","name":"Export Management"},
+                {"code":"3144IBA","year":"3","name":"Quality Management"},
+                {"code":"3014IBA","year":"3","name":"International Business Negotiation"},
+                {"code":"3112IBA","year":"3","name":"Management Strategy and Decision Making"},
+                {"code":"3004IBA","year":"3","name":"Inter-Cultural Management"},
+                {"code":"2005IBA","year":"2","name":"Comparative Management"},
+                {"code":"3004IBA","year":"3","name":"Inter-Cultural Management"},
+                {"code":"3006IBA","year":"3","name":"Business Ethics & Corporate Governance"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 1"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 2"}
+            ]},
+            {"name":"Employment Relations",
+            "courses":
+            [
+                {"code":"2001EHR","year":"2","name":"Management Employee Relations"},
+                {"code":"2006EHR","year":"2","name":"Health and Safety in the Workplace"},
+                {"code":"3008EHR","year":"3","name":"Workplace Industrial Relations"},
+                {"code":"2004EHR","year":"2","name":"Employment Relations Law"},
+                {"code":"3006EHR","year":"3","name":"Employment Strategies in Action"},
+                {"code":"3001EHR","year":"3","name":"Negotiation"},
+                {"code":"3005EHR","year":"3","name":"Safety, Law and Policy"},
+                {"code":"3009EHR","year":"3","name":"International Human Resource Management"},
+                {"code":"3033IBA","year":"3","name":"Managing People in the Global Economy"},
+                {"code":"3004EHR","year":"3","name":"Safety Management of Production System  10"},
+                {"code":"2007EHR","year":"2","name":"Labour Market Issues"},
+                {"code":"2005IBA","year":"2","name":"Comparative Management"},
+                {"code":"2154IBA","year":"2","name":"Business Logistics"},
+                {"code":"3004IBA","year":"3","name":"Inter-Cultural Management"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 1"},
+                {"code":"3001GBS","year":"3","name":"UG Business Internship PART 2"}
+            ]}
+        ]
+    },
+    {
+        "code":"1094BBiomedSc",
+        "name":"Bachelor of Biomedical Science",
+        "coreCourses": 
+        [
+            {"code":"1001MSC","year":"1","name":"Essentials of Chemistry and Physics"},
+            {"code":"1002MSC","year":"1","name":"Introduction to Biomedical Data Analysis"},
+            {"code":"1014MSC","year":"1","name":"Cells, Tissues and Regulation"},
+            {"code":"1016MSC","year":"1","name":"Anatomy and Physiology Systems I"},
+            {"code":"1005MSC","year":"1","name":"Genes and Disease"},
+            {"code":"1015MSC","year":"1","name":"Chemistry of Biological Systems"},
+            {"code":"1017MSC","year":"1","name":"Anatomy and Physiology Systems II"},
+            {"code":"1205MED","year":"1","name":"Health Challenges for the 21st Century"},
+            {"code":"2012AHS","year":"2","name":"Integrated Systems Physiology"},
+            {"code":"2008MSC","year":"2","name":"Structural Biochemistry "},
+            {"code":"2000MSC","year":"2","name":"Molecular Genetics"},
+            {"code":"2014MSC","year":"2","name":"Organic Chemistry"},
+            {"code":"2007MSC","year":"2","name":"Microbiology"},
+            {"code":"2020MSC","year":"2","name":"Neurobiology"},
+            {"code":"3016MSC","year":"3","name":"Macromolecular and Cellular Biochemistry"},
+            {"code":"3022MSC","year":"3","name":"Molecular Medicine"}
+        ],
+        "majors":
+        [
+            {"name":"Bioinformatics",
+            "courses":
+            [
+                {"code":"3014MSC","year":"3","name":"Molecular Biology"},
+                {"code":"3991SCG","year":"3","name":"Science Capstone Preparation"},
+                {"code":"1001ICT","year":"1","name":"Introduction to Programming"},
+                {"code":"1005ICT","year":"1","name":"Object Oriented Programming "},
+                {"code":"2401ICT","year":"2","name":"Data Structures and Algorithms"},
+                {"code":"3992SCG","year":"3","name":"Science Capstone"},
+                {"code":"3530ICT","year":"3","name":"Scientific and Parallel Computing"},
+                {"code":"3800ICT","year":"3","name":"Practical Bioinformatics "}
+            ]},
+            {"name":"Biochemistry and Molecular Biology",
+            "courses":
+            [
+                {"code":"1014BPS","year":"1","name":"Fundamentals of Biochemistry"},
+                {"code":"1042SCG","year":"1","name":"Genetics & Evolutionary Biology"},
+                {"code":"1023SCG","year":"1","name":"Chemistry I"},
+                {"code":"1024SCG","year":"1","name":"Chemistry II"},
+                {"code":"1041SCG","year":"1","name":"Biological Systems"},
+                {"code":"1011SCG","year":"1","name":"Mathematics IA"},
+                {"code":"1013SCG","year":"1","name":"Applied Mathematics"},
+                {"code":"2013BPS","year":"2","name":"Biotechniques Laboratory"}
+            ]},
+            {"name":"Marine Biology",
+            "courses":
+            [
+                {"code":"1014SCG","year":"1","name":"Statistics"},
+                {"code":"1044SCG","year":"1","name":"Earth Systems"},
+                {"code":"1042SCG","year":"1","name":"Genetics & Evolutionary Biology"},
+                {"code":"1023SCG","year":"1","name":"Chemistry I"},
+                {"code":"1024SCG","year":"1","name":"Chemistry II"},
+                {"code":"1013SCG","year":"1","name":"Applied Mathematics"},
+                {"code":"1043SCG","year":"1","name":"Introduction to Environmental Sustainability"},
+                {"code":"1041SCG","year":"1","name":"Biological Systems"}
+            ]},
+            {"name":"Wildlife Biology",
+            "courses":
+            [
+                {"code":"1044SCG","year":"1","name":"Earth Systems"},
+                {"code":"1023SCG","year":"1","name":"Chemistry I"},
+                {"code":"1024SCG","year":"1","name":"Chemistry II"},
+                {"code":"1042SCG","year":"1","name":"Genetics & Evolutionary Biology"},
+                {"code":"1013SCG","year":"1","name":"Applied Mathematics"},
+                {"code":"1043SCG","year":"1","name":"Introduction to Environmental Sustainability"},
+                {"code":"1041SCG","year":"1","name":"Biological Systems"},
+                {"code":"1011SCG","year":"1","name":"Mathematics IA"}
+            ]},
+            {"name":"Environmental Sustainability",
+            "courses":
+            [
+                {"code":"1014SCG","year":"1","name":"Statistics"},
+                {"code":"1044SCG","year":"1","name":"Earth Systems"},
+                {"code":"1051SCG","year":"1","name":"Science Revealed: Science, Technology and Society"},
+                {"code":"1042SCG","year":"1","name":"Genetics & Evolutionary Biology"},
+                {"code":"1023SCG","year":"1","name":"Chemistry I"},
+                {"code":"1013SCG","year":"1","name":"Applied Mathematics"},
+                {"code":"1011SCG","year":"1","name":"Mathematics IA"},
+                {"code":"1041SCG","year":"1","name":"Biological Systems"}
+            ]}
+        ]
+    }
+]

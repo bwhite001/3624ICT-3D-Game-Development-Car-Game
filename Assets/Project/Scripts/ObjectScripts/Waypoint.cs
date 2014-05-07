@@ -27,7 +27,7 @@ public class Waypoint : MonoBehaviour {
 			selected = false;
 
 
-			waypointController.SendMessage("selectWaypoint");
+			GameObject.FindGameObjectWithTag ("GameController").SendMessage ("playerAtWaypoint");
 		}
 
 

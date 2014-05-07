@@ -69,7 +69,6 @@ public class WaypointController : MonoBehaviour {
 		waypoints [selectedWaypointIndex].SendMessage ("setSelected", true);
 
 		GameObject.FindGameObjectWithTag ("ArrowController").SendMessage ("changeTarget", waypoints [selectedWaypointIndex].transform);
-
 	}
 
 	void getCloseWaypoints()
