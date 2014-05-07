@@ -24,9 +24,6 @@ public class GameController : MonoBehaviour {
 
 	void Start()
 	{
-		jsonController = new JSONController ();
-		jsonController.setCurrentProgram ("1034BBus");
-
 		if (ProgramObjectController.program == null) 
 		{
 			Debug.LogError("Program Not Defined!");
@@ -44,7 +41,7 @@ public class GameController : MonoBehaviour {
 	void instantiateControllers()
 	{
 		waypointController = GameObject.FindGameObjectWithTag ("WaypointController").GetComponent<WaypointController>();
-		waypointController.SendMessage ("createWaypoints", 45);
+		waypointController.SendMessage ("createWaypoints", 40);
 		
 		guiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<GUIController>();
 
@@ -109,9 +106,27 @@ public class GameController : MonoBehaviour {
 
 	void playerAtWaypoint()
 	{
-		insertMajors ();
+		//selectMajor (ProgramObjectController.getMajors () [0]);
+		int tmpI = currentYearIndex;
+		int tmpJ = currentCourseIndex + 1;
+
+		if(currentCourseIndex >= allCourses.GetLength(1)-1)
+		{
+			tmpI = currentYearIndex+1;
+			tmpJ = 0;
+		}
 
 		completedCourses++;
+		
+		if(completedCourses == allCourses.Length)
+			//End Game
+			Application.Quit();
+
+		if (allCourses [tmpI, tmpJ] == null)
+		{
+			inGameGuiController.displayMajorMenu(ProgramObjectController.getMajors(), true);
+			return;
+		}
 
 
 		if(currentCourseIndex >= allCourses.GetLength(1)-1)
@@ -122,21 +137,55 @@ public class GameController : MonoBehaviour {
 		else
 			currentCourseIndex++;
 
-		if (allCourses [currentYearIndex, currentCourseIndex] == null)
-			insertMajors ();
-		else
-			currentCourse = allCourses[currentYearIndex, currentCourseIndex];
 
 
-
+		currentCourse = allCourses[currentYearIndex, currentCourseIndex];
 		waypointController.SendMessage ("selectWaypoint");
-
 		updateGui();
 
 	}
 
-	void insertMajors()
+	void selectMajor(string majorName)
 	{
-		inGameGuiController.displayMajorMenu(ProgramObjectController.getMajors(), true);
+		Debug.Log (majorName);
+
+		ProgramObjectController.setMajor (majorName);
+
+		string[] f = ProgramObjectController.getMajorClasses (1);
+		string[] s = ProgramObjectController.getMajorClasses (2);
+		string[] t = ProgramObjectController.getMajorClasses (3);
+
+		foreach(string str in f)
+		{
+			Debug.Log(str);
+		}
+
+		int length = f.Length + s.Length + t.Length;
+		Debug.Log(length);
+
+		string[] majorCourses = new string[length];
+
+		f.CopyTo (majorCourses, 0);
+		s.CopyTo (majorCourses, f.Length);
+		t.CopyTo (majorCourses, s.Length);
+
+		int index = 0;
+
+		for (int i = 0; i<allCourses.GetLength(0); i++) 
+		{
+			for(int j = 0; j<allCourses.GetLength(1); j++)
+			{
+				if(allCourses[i,j] == null)
+				{
+					allCourses[i,j] = majorCourses[index];
+					index++;
+				}
+
+			}
+		}
+		playerAtWaypoint ();
+		guiController.setProgram (ProgramObjectController.getProgram(), majorName);
+
+
 	}
 }

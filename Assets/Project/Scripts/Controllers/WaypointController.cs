@@ -6,9 +6,9 @@ public class WaypointController : MonoBehaviour {
 
 	private Waypoint[] waypoints;
 
-	public int ammount = 35;
-
 	private int selectedWaypointIndex;
+
+	private int ammount;
 
 	public float largest = 500f;
 
@@ -27,8 +27,10 @@ public class WaypointController : MonoBehaviour {
 		"G53 Chiller House 7","G54 End of Trip Facility","G55 Multi Storey Carpark 2 (proposed)",
 		"GT2 Coastal Management"};
 
-	void createWaypoints (int ammount)
+	void createWaypoints (int set)
 	{
+		ammount = set;
+
 		waypoints = new Waypoint[ammount];
 
 		for (int i = 0; i<ammount; i++) {

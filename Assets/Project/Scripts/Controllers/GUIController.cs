@@ -58,7 +58,7 @@ public class GUIController : MonoBehaviour {
 
 		if (major != null) 
 		{
-			programString += " Major: "+major;
+			programString += ", Major: "+major;
 		}
 
 	}

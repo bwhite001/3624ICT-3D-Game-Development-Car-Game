@@ -51,22 +51,25 @@ public class ProgramObjectController : MonoBehaviour {
 		return coreCorses;
 	}
 
-	public void setMajor(string major)
+	public static void setMajor(string major)
 	{
 		JSONNode tmp = program ["majors"];
+		currentMajor = null;
 
 		for (int i = 0; i<tmp.Count; i++) 
 		{
-			if(tmp[i]["name"].Equals(major))
+
+			if((string)tmp[i]["name"] == major)
 			{
+				Debug.Log(currentMajor);
 				currentMajor = tmp[i];
 				return;
 			}
 		}
-
-		currentMajor = null;
+		Debug.Log(currentMajor);
 	}
 
+	
 	public static string[] getMajors()
 	{
 		JSONNode tmp = program ["majors"];
@@ -114,7 +117,7 @@ public class ProgramObjectController : MonoBehaviour {
 		return coreCorses;
 	}
 
-	public string getMajorName()
+	public static string getMajorName()
 	{
 		if(currentMajor != null)
 			return currentMajor["name"];
