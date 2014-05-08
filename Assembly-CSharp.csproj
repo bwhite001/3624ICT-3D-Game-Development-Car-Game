@@ -55,6 +55,7 @@
      <Compile Include="Assets\Project\Scripts\Controllers\WaypointController.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\SimpleJSON.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\SmoothFollow.cs" />
+     <Compile Include="Assets\Project\Scripts\Extensions\Wheel.cs" />
      <Compile Include="Assets\Project\Scripts\Menus\ProgramListMenu.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\CarScript.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\Waypoint.cs" />

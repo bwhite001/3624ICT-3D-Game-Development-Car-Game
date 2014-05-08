@@ -22,7 +22,7 @@
         "majors":
         [
             {"name":"System Services",
-            "courses":
+            "corses":
             [
                 {"year":"3","code":"3612ICT","name":"Database Systems and Administration PART 1"},
                 {"year":"3","code":"3612ICT","name":"Database Systems and Administration PART 2"},
@@ -37,7 +37,7 @@
             ]},
 
             {"name":"Information Technology Management and Marketing",
-            "courses":
+            "corses":
             [
                 {"year":"1","code":"1101IBA","name":"Management Concepts"},
                 {"year":"1","code":"1003MKT","name":"Introduction to Marketing"},
@@ -52,7 +52,7 @@
             ]},
 
             {"name":"Multimedia",
-            "courses":
+            "corses":
             [
                 {"year":"3","code":"3601ICT","name":"Professional Practice Portfolio"},
                 {"year":"3","code":"3723ICT","name":"Educational Design in Multimedia"},
@@ -67,7 +67,7 @@
             ]},
 
             {"name":"Software Development",
-            "courses":
+            "corses":
             [
                 {"year":"3","code":"3420ICT","name":"Systems Programming PART 1"},
                 {"year":"3","code":"3420ICT","name":"Systems Programming PART 2"},
@@ -82,7 +82,7 @@
             ]},
 
             {"name":"Computing and Intelligent Systems",
-            "courses":
+            "corses":
             [
                 {"year":"2","code":"2402ICT","name":"Discrete Mathematics"},
                 {"year":"3","code":"3511ICT","name":"Machine Learning"},
@@ -120,7 +120,7 @@
         "majors":
         [
             {"name":"Film and TV Production",
-            "courses":
+            "corses":
             [
                 {"code":"2651GFS","year":"2","name":"Principles of Screen Composition"},
                 {"code":"2612GFS","year":"2","name":"Video Documentary Production"},
@@ -134,7 +134,7 @@
                 {"code":"3704GFS","year":"3","name":"Screen Distribution"}
             ]},
             {"name":"Internet Computing",
-            "courses":
+            "corses":
             [
                 {"code":"1005ICT","year":"1","name":"Object Oriented Programming"},
                 {"code":"1007ICT","year":"1","name":"Computer Systems and Networks"},
@@ -148,7 +148,7 @@
                 {"code":"3412ICT","year":"3","name":"Software Architecture"}
             ]},
             {"name":"Digital Video",
-            "courses":
+            "corses":
             [
                 {"code":"2517HUM","year":"2","name":"Screen Production"},
                 {"code":"3526HUM","year":"3","name":"Advanced Screen Project"},
@@ -162,7 +162,7 @@
                 {"code":"2612QCA","year":"2","name":"Typography for Screen "}
             ]},
             {"name":"Music Production and Programming",
-            "courses":
+            "corses":
             [
                 {"code":"3063QCM","year":"3","name":"Music Programming and Production"},
                 {"code":"2324QCM","year":"2","name":"Composing and Arranging"},
@@ -176,7 +176,7 @@
                 {"code":"3063QCM","year":"3","name":"Music Programming and Production"}
             ]},
             {"name":"Visual Media Design",
-            "courses":
+            "corses":
             [
                 {"code":"1610QCA","year":"1","name":"Graphic Design"},
                 {"code":"3603QCA","year":"3","name":"Major Studio Project PART 1 "},
@@ -208,7 +208,7 @@
         "majors":
         [
             {"name":"Human Resource Management",
-            "courses":
+            "corses":
             [
                 {"code":"2002EHR","year":"2","name":"Human Resource Management Principles"},
                 {"code":"2005EHR","year":"2","name":"Organisational Behaviour"},
@@ -228,7 +228,7 @@
                 {"code":"3000GBS","year":"3","name":"UG Business Internship PART 2"}
             ]},
             {"name":"Marketing",
-            "courses":
+            "corses":
             [
                 {"code":"2004MKT","year":"2","name":"Consumer Psychology"},
                 {"code":"2034MKT","year":"2","name":"Market Research"},
@@ -248,7 +248,7 @@
                 {"code":"3053MKT","year":"3","name":"Internship PART 2"}
             ]},
             {"name":"Management",
-            "courses":
+            "corses":
             [
                 {"code":"2128IBA","year":"2","name":"Business Processes"},
                 {"code":"2005EHR","year":"2","name":"Organisational Behaviour"},
@@ -268,7 +268,7 @@
                 {"code":"3001GBS","year":"3","name":"UG Business Internship PART 2"}
             ]},
             {"name":"Logistics and Supply Network Management",
-            "courses":
+            "corses":
             [
                 {"code":"2150IBA","year":"2","name":"Introduction to Supply Chain Management"},
                 {"code":"2128IBA","year":"2","name":"Business Processes"},
@@ -288,7 +288,7 @@
                 {"code":"3001GBS","year":"3","name":"UG Business Internship PART 2"}
             ]},
             {"name":"Employment Relations",
-            "courses":
+            "corses":
             [
                 {"code":"2001EHR","year":"2","name":"Management Employee Relations"},
                 {"code":"2006EHR","year":"2","name":"Health and Safety in the Workplace"},
@@ -334,7 +334,7 @@
         "majors":
         [
             {"name":"Bioinformatics",
-            "courses":
+            "corses":
             [
                 {"code":"3014MSC","year":"3","name":"Molecular Biology"},
                 {"code":"3991SCG","year":"3","name":"Science Capstone Preparation"},
@@ -346,7 +346,7 @@
                 {"code":"3800ICT","year":"3","name":"Practical Bioinformatics "}
             ]},
             {"name":"Biochemistry and Molecular Biology",
-            "courses":
+            "corses":
             [
                 {"code":"1014BPS","year":"1","name":"Fundamentals of Biochemistry"},
                 {"code":"1042SCG","year":"1","name":"Genetics & Evolutionary Biology"},
@@ -358,7 +358,7 @@
                 {"code":"2013BPS","year":"2","name":"Biotechniques Laboratory"}
             ]},
             {"name":"Marine Biology",
-            "courses":
+            "corses":
             [
                 {"code":"1014SCG","year":"1","name":"Statistics"},
                 {"code":"1044SCG","year":"1","name":"Earth Systems"},
@@ -370,7 +370,7 @@
                 {"code":"1041SCG","year":"1","name":"Biological Systems"}
             ]},
             {"name":"Wildlife Biology",
-            "courses":
+            "corses":
             [
                 {"code":"1044SCG","year":"1","name":"Earth Systems"},
                 {"code":"1023SCG","year":"1","name":"Chemistry I"},
@@ -382,7 +382,7 @@
                 {"code":"1011SCG","year":"1","name":"Mathematics IA"}
             ]},
             {"name":"Environmental Sustainability",
-            "courses":
+            "corses":
             [
                 {"code":"1014SCG","year":"1","name":"Statistics"},
                 {"code":"1044SCG","year":"1","name":"Earth Systems"},

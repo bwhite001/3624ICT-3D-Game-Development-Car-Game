@@ -47,6 +47,7 @@
 'Assets/Project/Scripts/Controllers/WaypointController.cs'
 'Assets/Project/Scripts/Extensions/SimpleJSON.cs'
 'Assets/Project/Scripts/Extensions/SmoothFollow.cs'
+'Assets/Project/Scripts/Extensions/Wheel.cs'
 'Assets/Project/Scripts/Menus/ProgramListMenu.cs'
 'Assets/Project/Scripts/ObjectScripts/CarScript.cs'
 'Assets/Project/Scripts/ObjectScripts/Waypoint.cs'
