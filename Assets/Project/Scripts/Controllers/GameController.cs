@@ -26,9 +26,10 @@ public class GameController : MonoBehaviour {
 	{
 		if (ProgramObjectController.program == null) 
 		{
-			Debug.LogError("Program Not Defined!");
+			Application.LoadLevel(0);
+			Debug.Log("Program Not Defined!");
 			Debug.Break();
-			Application.Quit();
+
 		}
 		else
 		{
