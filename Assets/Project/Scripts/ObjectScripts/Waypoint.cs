@@ -20,19 +20,6 @@ public class Waypoint : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider other) {
-
-		if(other.gameObject.tag == "Player" && selected == true)
-		{
-			selected = false;
-
-
-			GameObject.FindGameObjectWithTag ("GameController").SendMessage ("playerAtWaypoint");
-		}
-
-
-	}
-
 	void OnDrawGizmos() {
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawSphere(transform.position, 1);
@@ -43,7 +30,7 @@ public class Waypoint : MonoBehaviour {
 		Gizmos.DrawWireSphere (transform.position, 10);
 	}
 
-	void setSelected(bool select)
+	public void setSelected(bool select)
 	{
 		selected = select;
 	}
@@ -52,4 +39,11 @@ public class Waypoint : MonoBehaviour {
 	{
 		waypointName = name;
 	}
+
+	public bool getSelected()
+	{
+		return selected;
+	}
+
+
 }

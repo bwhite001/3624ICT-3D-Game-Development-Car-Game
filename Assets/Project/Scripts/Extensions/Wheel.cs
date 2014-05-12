@@ -18,7 +18,7 @@ namespace WheelClass
 			public Vector3 wheelVelo = Vector3.zero;
 			public Vector3 groundSpeed = Vector3.zero;
 
-			private float wheelRadius = 0.3f;
+			private float wheelRadius = 0.8f;
 			private float suspensionRange = 0.1f;
 			private float suspensionDamper = 50f;
 			private float suspensionSpringFront = 18500f;
@@ -47,9 +47,9 @@ namespace WheelClass
 				
 				wc.sidewaysFriction = wfc;
 				wheelGraphic = wheelTransform;
-				//		wheel.tireGraphic = wheelTransform.GetComponentsInChildren(Transform)[1];
-				
-				//		wheelRadius = wheel.tireGraphic.renderer.bounds.size.y / 2;	
+//				tireGraphic = wheelTransform.GetComponentsInChildren(Transform)[1];
+//		
+//				wheelRadius = tireGraphic.renderer.bounds.size.y / 2;	
 				collider.radius = wheelRadius;
 				
 				if (frontWheel)

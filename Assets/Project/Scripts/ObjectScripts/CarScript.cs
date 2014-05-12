@@ -14,14 +14,11 @@ public class CarScript : MonoBehaviour {
 	public Rigidbody carRigidbody;
 
 	private Vector3 dragMultiplier = new Vector3(2, 5, 1);
-	private float handbrakeXDragFactor = 0.5f;
 	private float initialDragMultiplierX = 10.0f;
-	private float handbrakeTime = 0.0f;
-	private float handbrakeTimer = 1.0f;
-
+	public float handbrakeApplyr = 10;
 
 	private float resetTimer  = 0.0f;
-	private float resetTime  = 5.0f;
+	private float resetTime  = 2.5f;
 
 	//center of mass vars
 	public Transform centerOfMassTrans;
@@ -87,10 +84,28 @@ public class CarScript : MonoBehaviour {
 
 		Check_If_Car_Is_Flipped();
 
+		applyBrake ();
+
+		if(throttle == 0 && currentEnginePower <= 0)
+			carRigidbody.velocity = new Vector3 (0, carRigidbody.velocity.y, 0);
+
 		UpdateGear(relativeVelocity);
 
 	}
+	void applyBrake ()
+	{
+		if(Input.GetKey("space"))
+		{
+			if(Mathf.Abs(carRigidbody.velocity.z) > 0)
+				if(carRigidbody.velocity.z < 0)
+					handbrakeApplyr = -handbrakeApplyr;
+			else
+				handbrakeApplyr = 0;
 
+			carRigidbody.velocity = new Vector3 (carRigidbody.velocity.x, carRigidbody.velocity.y, carRigidbody.velocity.z-handbrakeApplyr);
+
+		}
+	}
 	void initialization() {
 
 		carRigidbody = rigidbody;
@@ -207,8 +222,8 @@ public class CarScript : MonoBehaviour {
 		                                         -relativeVelocity.z * Mathf.Abs(relativeVelocity.z) );
 
 		var drag = Vector3.Scale(dragMultiplier, relativeDrag);
-	
 		drag.x *= maxSpeed / relativeVelocity.magnitude;
+
 
 		if(Mathf.Abs(relativeVelocity.x) < 5)
 			drag.x = -relativeVelocity.x * dragMultiplier.x;
@@ -233,14 +248,20 @@ public class CarScript : MonoBehaviour {
 
 	void CalculateEnginePower(Vector3 relativeVelocity)
 	{
-		if(Utilitys.HaveTheSameSign(relativeVelocity.z, throttle))
+		if(throttle == 0)
+		{
+			currentEnginePower -= Time.deltaTime * 1000;
+		}
+		else if( Utilitys.HaveTheSameSign(relativeVelocity.z, throttle) )
 		{
 			float normPower = (currentEnginePower / engineForceValues[engineForceValues.Length - 1]) * 2;
 			currentEnginePower += Time.deltaTime * 200 * Utilitys.EvaluateNormPower(normPower);
 		}
 		else
+		{
 			currentEnginePower -= Time.deltaTime * 300;
-
+		}
+		
 		if(currentGear == 0)
 			currentEnginePower = Mathf.Clamp(currentEnginePower, 0, engineForceValues[0]);
 		else

@@ -27,7 +27,7 @@ public class WaypointController : MonoBehaviour {
 		"G53 Chiller House 7","G54 End of Trip Facility","G55 Multi Storey Carpark 2 (proposed)",
 		"GT2 Coastal Management"};
 
-	void createWaypoints (int set)
+	public void createWaypoints (int set)
 	{
 		ammount = set;
 
@@ -36,7 +36,11 @@ public class WaypointController : MonoBehaviour {
 		for (int i = 0; i<ammount; i++) {
 			Vector3 pos = getRandomPos();
 
-			Waypoint temp = Instantiate(waypointPrefab, pos, Quaternion.identity) as Waypoint;
+			Waypoint temp;
+
+
+			temp = Instantiate(waypointPrefab, pos, Quaternion.identity) as Waypoint;
+
 
 			//set all waypoints to not selected
 			temp.selected = false;
@@ -45,6 +49,7 @@ public class WaypointController : MonoBehaviour {
 			string tmpName = WaypontNames[index];
 
 			temp.waypointName = tmpName;
+			temp.transform.parent = transform;
 
 			//add to waypoints array
 			waypoints[i] = temp;
@@ -64,7 +69,7 @@ public class WaypointController : MonoBehaviour {
 
 	}
 
-	void selectWaypoint() {
+	public void selectWaypoint() {
 
 		selectedWaypointIndex = (int)Random.Range (0, ammount - 1);
 

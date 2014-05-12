@@ -5,35 +5,42 @@ using SimpleJSON;
 public class GameController : MonoBehaviour {
 
 	private WaypointController waypointController;
+	private AIController aiController;
 	private GUIController guiController;
 	private InGameGUIController inGameGuiController;
 	private ArrowController arrowController;
 	private JSONController jsonController;
+
+	public int ammountOfWaypoints = 40;
+	public int ammountOfAi = 10;
 
 	private JSONNode CurrentProgram;
 
 	private int pickMajorIndex;
 	private int pickMajorYear;
 
-	private int currentCourseIndex = 0;
-	private int currentYearIndex = 0;
+	public int currentCourseIndex = 0;
+	public int currentYearIndex = 0;
 	private int completedCourses = 0;
+
+	private int[] endGameIndexs = {7,2};
 
 	private string[,] allCourses = new string[3,8];
 	private string currentCourse;
 
 	void Start()
 	{
+		instantiateControllers ();
+
 		if (ProgramObjectController.program == null) 
 		{
-			Application.LoadLevel(0);
+			//Application.LoadLevel(0);
 			Debug.Log("Program Not Defined!");
-			Debug.Break();
+			//Debug.Break();
 
 		}
 		else
 		{
-			instantiateControllers ();
 			insertCore();
 			playerStart();
 		}
@@ -41,14 +48,15 @@ public class GameController : MonoBehaviour {
 	}
 	void instantiateControllers()
 	{
+		aiController = GameObject.FindGameObjectWithTag ("AIController").GetComponent<AIController>();
 		waypointController = GameObject.FindGameObjectWithTag ("WaypointController").GetComponent<WaypointController>();
-		waypointController.SendMessage ("createWaypoints", 40);
+
+		waypointController.createWaypoints (ammountOfWaypoints);
+		aiController.createCars (ammountOfAi);
 		
 		guiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<GUIController>();
 
 		inGameGuiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<InGameGUIController>();
-
-		Debug.Log (inGameGuiController);
 
 		guiController.setProgram (ProgramObjectController.getProgram(), null);
 	}
@@ -76,7 +84,7 @@ public class GameController : MonoBehaviour {
 				{
 					allCourses[i,j] = courseName[j];
 
-					Debug.Log (courseName[j] + " @ " + i + "," + j);
+					//Debug.Log (courseName[j] + " @ " + i + "," + j);
 				}
 			}
 		}
@@ -84,7 +92,7 @@ public class GameController : MonoBehaviour {
 
 	void playerStart()
 	{
-		waypointController.SendMessage ("selectWaypoint");
+		waypointController.selectWaypoint();
 
 		currentCourseIndex = 0;
 		currentYearIndex = 0;
@@ -105,9 +113,13 @@ public class GameController : MonoBehaviour {
 		guiController.setInfo (currentYearIndex + 1,(currentCourseIndex/4 +1), completedCourses);
 	}
 
-	void playerAtWaypoint()
+	public void playerAtWaypoint()
 	{
-		//selectMajor (ProgramObjectController.getMajors () [0]);
+		if (currentCourseIndex >= endGameIndexs [0] && currentYearIndex >= endGameIndexs [1])
+		{
+			endGame ();
+			return;
+		}
 		int tmpI = currentYearIndex;
 		int tmpJ = currentCourseIndex + 1;
 
@@ -188,5 +200,10 @@ public class GameController : MonoBehaviour {
 		guiController.setProgram (ProgramObjectController.getProgram(), majorName);
 
 
+	}
+
+	void endGame()
+	{
+		Application.LoadLevel (2);
 	}
 }
