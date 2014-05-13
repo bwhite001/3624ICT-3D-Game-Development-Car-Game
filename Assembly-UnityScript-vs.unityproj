@@ -46,16 +46,18 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\JavaScripts\Car.js" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Project\Shaders\myTestShader.shader" />
+     <None Include="Assets\Project\Extensions\EasyRoads3D\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
      <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
- <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
- <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
+ <Reference Include="Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D">
+ <HintPath>Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{6401FF0B-3F0D-C46D-D104-C9E66C263FBE}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -3,11 +3,18 @@ using System.Collections;
 
 public class ProgramListMenu : MonoBehaviour {
 	public GUIStyle buttonStyle;
+	public GUIStyle backbuttonStyle;
+
 	private int screenW;
 	private int screenH;
 
-	private float buttonW = 500f;
-	private float buttonH = 100f;
+	public float buttonW = 500f;
+	public float buttonH = 100f;
+	public float bbuttonW = 500f;
+	public float bbuttonH = 100f;
+
+
+	public Rect backBtn;
 
 	private JSONController jsonController;
 
@@ -43,6 +50,16 @@ public class ProgramListMenu : MonoBehaviour {
 			}
 		}
 
+		backBtn = buttonBox;
+		backBtn.width = bbuttonW;
+		backBtn.height = bbuttonH;
+
+		backBtn.y = buttonBox.y + (programNames.Length) * (buttonH + 10);
+		backBtn.x = (0.5f * screenW) - buttonW/1.5f;
+
+		if(GUI.Button(backBtn,"Back", backbuttonStyle))
+			Application.LoadLevel(0);
+
 	}
 
 	void goToProgram (string code)
@@ -51,7 +68,7 @@ public class ProgramListMenu : MonoBehaviour {
 
 		if (ProgramObjectController.program != null) 
 		{
-			Application.LoadLevel(1);
+			Application.LoadLevel(2);
 		}
 	}
 }

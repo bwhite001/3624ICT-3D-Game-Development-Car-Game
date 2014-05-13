@@ -46,6 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\EasyRoads3DTerrainID.cs" />
+     <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\MarkerScript.cs" />
+     <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\RoadObjectScript.cs" />
+     <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\SurfaceScript.cs" />
+     <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\sideObjectScript.cs" />
+     <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\AIController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\ArrowController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\GUIController.cs" />
@@ -58,19 +64,19 @@
      <Compile Include="Assets\Project\Scripts\Extensions\SmoothFollow.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\Utilitys.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\Wheel.cs" />
+     <Compile Include="Assets\Project\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\Project\Scripts\Menus\ProgramListMenu.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\CarAI.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\CarScript.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\PlayerCollision.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\Waypoint.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Project\Shaders\myTestShader.shader" />
+     <None Include="Assets\Project\Extensions\EasyRoads3D\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
      <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6401FF0B-3F0D-C46D-D104-C9E66C263FBE}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{F809AFAB-8D9E-2D4E-41BA-D90E94444939}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+ <Reference Include="Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D">
+ <HintPath>Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

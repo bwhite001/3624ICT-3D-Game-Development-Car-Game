@@ -50,7 +50,12 @@
      <Compile Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Project\Shaders\myTestShader.shader" />
+     <None Include="Assets\Project\Extensions\EasyRoads3D\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
      <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
+ <Reference Include="Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D">
+ <HintPath>Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
