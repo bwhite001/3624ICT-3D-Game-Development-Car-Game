@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: d16f9eed7b2e54492ad160115ee32f2d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Component_10
+    100002: Component_10 1
+    100004: Component_10 2
+    100006: Component_10 3
+    100008: Component_10 4
+    100010: Component_10 5
+    100012: Component_10 6
+    100014: Component_10 7
+    100016: Component_11
+    100018: Component_11 1
+    100020: Component_11 10
+    100022: Component_11 11
+    100024: Component_11 12
+    100026: Component_11 13
+    100028: Component_11 14
+    100030: Component_11 15
+    100032: Component_11 2
+    100034: Component_11 3
+    100036: Component_11 4
+    100038: Component_11 5
+    100040: Component_11 6
+    100042: Component_11 7
+    100044: Component_11 8
+    100046: Component_11 9
+    100048: Component_12
+    100050: Component_12 1
+    100052: Component_12 2
+    100054: Component_12 3
+    100056: Component_12 4
+    100058: Component_12 5
+    100060: Component_12 6
+    100062: Component_12 7
+    100064: Component_13
+    100066: Component_13 1
+    100068: Component_13 2
+    100070: Component_13 3
+    100072: Component_13 4
+    100074: Component_13 5
+    100076: Component_13 6
+    100078: Component_13 7
+    100080: Component_16
+    100082: Component_16 1
+    100084: Component_17
+    100086: group_0
+    100088: ID106
+    100090: ID106 1
+    100092: ID106 2
+    100094: ID106 3
+    100096: ID106 4
+    100098: ID106 5
+    100100: ID106 6
+    100102: ID106 7
+    100104: ID129
+    100106: ID137
+    100108: ID155
+    100110: ID163
+    100112: ID169
+    100114: ID183
+    100116: ID189
+    100118: ID195
+    100120: ID201
+    100122: ID207
+    100124: ID213
+    100126: ID219
+    100128: ID225
+    100130: ID231
+    100132: ID237
+    100134: ID243
+    100136: ID249
+    100138: ID255
+    100140: ID261
+    100142: ID267
+    100144: ID273
+    100146: ID279
+    100148: ID285
+    100150: ID293
+    100152: ID297
+    100154: ID301
+    100156: instance_0
+    100158: instance_1
+    100160: instance_10
+    100162: instance_11
+    100164: instance_12
+    100166: instance_13
+    100168: instance_14
+    100170: instance_15
+    100172: instance_16
+    100174: instance_17
+    100176: instance_18
+    100178: instance_19
+    100180: instance_2
+    100182: instance_20
+    100184: instance_21
+    100186: instance_22
+    100188: instance_23
+    100190: instance_24
+    100192: instance_25
+    100194: instance_26
+    100196: instance_27
+    100198: instance_28
+    100200: instance_29
+    100202: instance_3
+    100204: instance_30
+    100206: instance_31
+    100208: instance_32
+    100210: instance_33
+    100212: instance_34
+    100214: instance_35
+    100216: instance_36
+    100218: instance_37
+    100220: instance_38
+    100222: instance_39
+    100224: instance_4
+    100226: instance_40
+    100228: instance_41
+    100230: instance_42
+    100232: instance_43
+    100234: instance_44
+    100236: instance_45
+    100238: instance_5
+    100240: instance_6
+    100242: instance_7
+    100244: instance_8
+    100246: instance_9
+    100248: L207-03
+    100250: ntitled
+    100252: //RootNode
+    100254: u_bar
+    400000: Component_10
+    400002: Component_10 1
+    400004: Component_10 2
+    400006: Component_10 3
+    400008: Component_10 4
+    400010: Component_10 5
+    400012: Component_10 6
+    400014: Component_10 7
+    400016: Component_11
+    400018: Component_11 1
+    400020: Component_11 10
+    400022: Component_11 11
+    400024: Component_11 12
+    400026: Component_11 13
+    400028: Component_11 14
+    400030: Component_11 15
+    400032: Component_11 2
+    400034: Component_11 3
+    400036: Component_11 4
+    400038: Component_11 5
+    400040: Component_11 6
+    400042: Component_11 7
+    400044: Component_11 8
+    400046: Component_11 9
+    400048: Component_12
+    400050: Component_12 1
+    400052: Component_12 2
+    400054: Component_12 3
+    400056: Component_12 4
+    400058: Component_12 5
+    400060: Component_12 6
+    400062: Component_12 7
+    400064: Component_13
+    400066: Component_13 1
+    400068: Component_13 2
+    400070: Component_13 3
+    400072: Component_13 4
+    400074: Component_13 5
+    400076: Component_13 6
+    400078: Component_13 7
+    400080: Component_16
+    400082: Component_16 1
+    400084: Component_17
+    400086: group_0
+    400088: ID106
+    400090: ID106 1
+    400092: ID106 2
+    400094: ID106 3
+    400096: ID106 4
+    400098: ID106 5
+    400100: ID106 6
+    400102: ID106 7
+    400104: ID129
+    400106: ID137
+    400108: ID155
+    400110: ID163
+    400112: ID169
+    400114: ID183
+    400116: ID189
+    400118: ID195
+    400120: ID201
+    400122: ID207
+    400124: ID213
+    400126: ID219
+    400128: ID225
+    400130: ID231
+    400132: ID237
+    400134: ID243
+    400136: ID249
+    400138: ID255
+    400140: ID261
+    400142: ID267
+    400144: ID273
+    400146: ID279
+    400148: ID285
+    400150: ID293
+    400152: ID297
+    400154: ID301
+    400156: instance_0
+    400158: instance_1
+    400160: instance_10
+    400162: instance_11
+    400164: instance_12
+    400166: instance_13
+    400168: instance_14
+    400170: instance_15
+    400172: instance_16
+    400174: instance_17
+    400176: instance_18
+    400178: instance_19
+    400180: instance_2
+    400182: instance_20
+    400184: instance_21
+    400186: instance_22
+    400188: instance_23
+    400190: instance_24
+    400192: instance_25
+    400194: instance_26
+    400196: instance_27
+    400198: instance_28
+    400200: instance_29
+    400202: instance_3
+    400204: instance_30
+    400206: instance_31
+    400208: instance_32
+    400210: instance_33
+    400212: instance_34
+    400214: instance_35
+    400216: instance_36
+    400218: instance_37
+    400220: instance_38
+    400222: instance_39
+    400224: instance_4
+    400226: instance_40
+    400228: instance_41
+    400230: instance_42
+    400232: instance_43
+    400234: instance_44
+    400236: instance_45
+    400238: instance_5
+    400240: instance_6
+    400242: instance_7
+    400244: instance_8
+    400246: instance_9
+    400248: L207-03
+    400250: ntitled
+    400252: //RootNode
+    400254: u_bar
+    2300000: Component_10
+    2300002: Component_10 1
+    2300004: Component_10 2
+    2300006: Component_10 3
+    2300008: Component_10 4
+    2300010: Component_10 5
+    2300012: Component_10 6
+    2300014: Component_10 7
+    2300016: Component_11
+    2300018: Component_11 1
+    2300020: Component_11 10
+    2300022: Component_11 11
+    2300024: Component_11 12
+    2300026: Component_11 13
+    2300028: Component_11 14
+    2300030: Component_11 15
+    2300032: Component_11 2
+    2300034: Component_11 3
+    2300036: Component_11 4
+    2300038: Component_11 5
+    2300040: Component_11 6
+    2300042: Component_11 7
+    2300044: Component_11 8
+    2300046: Component_11 9
+    2300048: Component_12
+    2300050: Component_12 1
+    2300052: Component_12 2
+    2300054: Component_12 3
+    2300056: Component_12 4
+    2300058: Component_12 5
+    2300060: Component_12 6
+    2300062: Component_12 7
+    2300064: Component_13
+    2300066: Component_13 1
+    2300068: Component_13 2
+    2300070: Component_13 3
+    2300072: Component_13 4
+    2300074: Component_13 5
+    2300076: Component_13 6
+    2300078: Component_13 7
+    2300080: Component_16
+    2300082: Component_16 1
+    2300084: Component_17
+    2300086: ID106
+    2300088: ID106 1
+    2300090: ID106 2
+    2300092: ID106 3
+    2300094: ID106 4
+    2300096: ID106 5
+    2300098: ID106 6
+    2300100: ID106 7
+    2300102: ID129
+    2300104: ID155
+    2300106: ID163
+    2300108: ID183
+    2300110: ID189
+    2300112: ID195
+    2300114: ID201
+    2300116: ID207
+    2300118: ID213
+    2300120: ID219
+    2300122: ID225
+    2300124: ID231
+    2300126: ID237
+    2300128: ID243
+    2300130: ID249
+    2300132: ID255
+    2300134: ID261
+    2300136: ID267
+    2300138: ID273
+    2300140: ID279
+    2300142: ID285
+    2300144: ntitled
+    2300146: u_bar
+    3300000: Component_10
+    3300002: Component_10 1
+    3300004: Component_10 2
+    3300006: Component_10 3
+    3300008: Component_10 4
+    3300010: Component_10 5
+    3300012: Component_10 6
+    3300014: Component_10 7
+    3300016: Component_11
+    3300018: Component_11 1
+    3300020: Component_11 10
+    3300022: Component_11 11
+    3300024: Component_11 12
+    3300026: Component_11 13
+    3300028: Component_11 14
+    3300030: Component_11 15
+    3300032: Component_11 2
+    3300034: Component_11 3
+    3300036: Component_11 4
+    3300038: Component_11 5
+    3300040: Component_11 6
+    3300042: Component_11 7
+    3300044: Component_11 8
+    3300046: Component_11 9
+    3300048: Component_12
+    3300050: Component_12 1
+    3300052: Component_12 2
+    3300054: Component_12 3
+    3300056: Component_12 4
+    3300058: Component_12 5
+    3300060: Component_12 6
+    3300062: Component_12 7
+    3300064: Component_13
+    3300066: Component_13 1
+    3300068: Component_13 2
+    3300070: Component_13 3
+    3300072: Component_13 4
+    3300074: Component_13 5
+    3300076: Component_13 6
+    3300078: Component_13 7
+    3300080: Component_16
+    3300082: Component_16 1
+    3300084: Component_17
+    3300086: ID106
+    3300088: ID106 1
+    3300090: ID106 2
+    3300092: ID106 3
+    3300094: ID106 4
+    3300096: ID106 5
+    3300098: ID106 6
+    3300100: ID106 7
+    3300102: ID129
+    3300104: ID155
+    3300106: ID163
+    3300108: ID183
+    3300110: ID189
+    3300112: ID195
+    3300114: ID201
+    3300116: ID207
+    3300118: ID213
+    3300120: ID219
+    3300122: ID225
+    3300124: ID231
+    3300126: ID237
+    3300128: ID243
+    3300130: ID249
+    3300132: ID255
+    3300134: ID261
+    3300136: ID267
+    3300138: ID273
+    3300140: ID279
+    3300142: ID285
+    3300144: ntitled
+    3300146: u_bar
+    4300000: Component_17
+    4300002: ID129
+    4300004: Component_16
+    4300006: Component_11
+    4300008: Component_11
+    4300010: Component_13
+    4300012: Component_12
+    4300014: Component_10
+    4300016: ID106
+    4300018: ntitled
+    4300020: ID183
+    4300022: ID189
+    4300024: ID195
+    4300026: ID201
+    4300028: ID207
+    4300030: ID213
+    4300032: ID219
+    4300034: ID225
+    4300036: ID231
+    4300038: ID237
+    4300040: ID243
+    4300042: ID249
+    4300044: ID255
+    4300046: ID261
+    4300048: ID267
+    4300050: ID273
+    4300052: ID279
+    4300054: ID285
+    4300056: u_bar
+    4300058: ID155
+    4300060: ID163
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0199999996
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
