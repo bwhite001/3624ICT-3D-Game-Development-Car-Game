@@ -30,11 +30,6 @@ public class GUIController : MonoBehaviour {
 		programGUI.text = "";
 		infoGUI.text = "";
 
-		locationGUIBoxRect = locationGUIBox.pixelInset;
-		courseGUIBoxRect = courseGUIBox.pixelInset;
-		programGUIBoxRect = programGUIBox.pixelInset;
-		infoGUIBoxRect = infoGUIBox.pixelInset;
-
 	
 	}
 	
@@ -74,14 +69,6 @@ public class GUIController : MonoBehaviour {
 		courseGUI.text = courseString;
 		programGUI.text = programString;
 		infoGUI.text = infoString;
-
-		Rect topBox = getBigest (locationGUIBoxRect, locationGUI, courseGUIBoxRect, courseGUI);
-		Rect bottomBox = getBigest(infoGUIBoxRect, infoGUI, programGUIBoxRect, programGUI);
-
-		locationGUIBox.pixelInset = setWidth(locationGUIBox.pixelInset, topBox);
-		courseGUIBox.pixelInset = setWidth (courseGUIBox.pixelInset, topBox);
-		programGUIBox.pixelInset = setWidth (programGUIBox.pixelInset, bottomBox);
-		infoGUIBox.pixelInset = setWidth (infoGUIBox.pixelInset, bottomBox);
 
 	}
 

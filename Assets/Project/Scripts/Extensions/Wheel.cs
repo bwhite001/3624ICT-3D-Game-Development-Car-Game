@@ -18,14 +18,15 @@ namespace WheelClass
 			public Vector3 wheelVelo = Vector3.zero;
 			public Vector3 groundSpeed = Vector3.zero;
 
-			private float wheelRadius = 0.8f;
+			private float wheelRadius = 0.3f;
 			private float suspensionRange = 0.1f;
 			private float suspensionDamper = 50f;
 			private float suspensionSpringFront = 18500f;
 			private float suspensionSpringRear = 9000f;
 
-			public Wheel (Transform wheelTransform, bool frontWheel, WheelFrictionCurve wfc)
+		public Wheel (Transform wheelTransform, bool frontWheel, WheelFrictionCurve wfc, float wheelRad)
 			{
+				wheelRadius = wheelRad / 10;
 				GameObject go = new GameObject(wheelTransform.name + " Collider");
 				go.transform.position = wheelTransform.position;
 				go.transform.parent = wheelTransform.parent.transform;

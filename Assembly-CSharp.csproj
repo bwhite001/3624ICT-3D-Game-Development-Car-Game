@@ -52,12 +52,15 @@
      <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\SurfaceScript.cs" />
      <Compile Include="Assets\Project\Extensions\EasyRoads3D\scripts\sideObjectScript.cs" />
      <Compile Include="Assets\Project\Extensions\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Project\Scripts\Controllers\AIController.cs" />
+     <Compile Include="Assets\Project\Scripts\AI Scripts\AIController.cs" />
+     <Compile Include="Assets\Project\Scripts\AI Scripts\AiTerritory.cs" />
+     <Compile Include="Assets\Project\Scripts\AI Scripts\CarAI.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\ArrowController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\GUIController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\GameController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\InGameGUIController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\JSONController.cs" />
+     <Compile Include="Assets\Project\Scripts\Controllers\PatrolPointController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\ProgramObjectController.cs" />
      <Compile Include="Assets\Project\Scripts\Controllers\WaypointController.cs" />
      <Compile Include="Assets\Project\Scripts\Extensions\SimpleJSON.cs" />
@@ -66,14 +69,14 @@
      <Compile Include="Assets\Project\Scripts\Extensions\Wheel.cs" />
      <Compile Include="Assets\Project\Scripts\Menus\MainMenu.cs" />
      <Compile Include="Assets\Project\Scripts\Menus\ProgramListMenu.cs" />
-     <Compile Include="Assets\Project\Scripts\ObjectScripts\CarAI.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\CarScript.cs" />
+     <Compile Include="Assets\Project\Scripts\ObjectScripts\PatrolPoint.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\PlayerCollision.cs" />
      <Compile Include="Assets\Project\Scripts\ObjectScripts\Waypoint.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Project\Shaders\myTestShader.shader" />
      <None Include="Assets\Project\Extensions\EasyRoads3D\Shaders\EasyRoads3D-Normal-Diffuse.shader" />
-     <None Include="Assets\Project\Models\Lancer\CREDITS.txt" />
+     <None Include="Assets\Project\Models\Cars\Lancer\CREDITS.txt" />
  <Reference Include="Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D">
  <HintPath>Assets\Project\Extensions\EasyRoads3D\lib\EasyRoads3D.dll</HintPath>
  </Reference>
