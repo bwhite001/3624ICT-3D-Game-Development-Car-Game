@@ -130,10 +130,6 @@ public class GameController : MonoBehaviour {
 		}
 
 		completedCourses++;
-		
-		if(completedCourses == allCourses.Length)
-			//End Game
-			Application.Quit();
 
 		if (allCourses [tmpI, tmpJ] == null)
 		{
@@ -162,44 +158,34 @@ public class GameController : MonoBehaviour {
 	{
 		Debug.Log (majorName);
 
-		ProgramObjectController.setMajor (majorName);
+		ProgramObjectController.setAndComeBack (majorName);
 
-		string[] f = ProgramObjectController.getMajorClasses (1);
-		string[] s = ProgramObjectController.getMajorClasses (2);
-		string[] t = ProgramObjectController.getMajorClasses (3);
 
-		foreach(string str in f)
-		{
-			Debug.Log(str);
-		}
 
-		int length = f.Length + s.Length + t.Length;
-		Debug.Log(length);
+	}
 
-		string[] majorCourses = new string[length];
-
-		f.CopyTo (majorCourses, 0);
-		s.CopyTo (majorCourses, f.Length);
-		t.CopyTo (majorCourses, s.Length);
+	void setMajorCourses(string[] majorCourses)
+	{
+		string majorName = ProgramObjectController.getMajorName ();
 
 		int index = 0;
-
+		
 		for (int i = 0; i<allCourses.GetLength(0); i++) 
 		{
 			for(int j = 0; j<allCourses.GetLength(1); j++)
 			{
-				if(allCourses[i,j] == null)
+				if(allCourses[i,j] == null && majorCourses[index] != null)
 				{
-					allCourses[i,j] = majorCourses[index];
+					Debug.Log(i + " " + j + " " + index);
+					Debug.Log (majorCourses[index]);
 					index++;
 				}
-
+				
 			}
 		}
+
 		playerAtWaypoint ();
 		guiController.setProgram (ProgramObjectController.getProgram(), majorName);
-
-
 	}
 
 	void endGame()

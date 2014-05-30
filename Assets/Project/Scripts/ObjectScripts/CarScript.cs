@@ -10,6 +10,8 @@ public class CarScript : MonoBehaviour {
 	private float steer = 0;
 	private bool handbrake = false;
 
+	public float wheelRatio = 3;
+
 	public Transform carTransform;
 	public Rigidbody carRigidbody;
 
@@ -19,6 +21,8 @@ public class CarScript : MonoBehaviour {
 
 	private float resetTimer  = 0.0f;
 	private float resetTime  = 2.5f;
+
+
 
 	//center of mass vars
 	public Transform centerOfMassTrans;
@@ -58,6 +62,16 @@ public class CarScript : MonoBehaviour {
 
 	public float[] signs = new float[2];
 
+	//setup spin for car
+	public float attackInterval = 5.0f;
+	public float noOfSec = 0.0f;
+
+//	public int totalSpin = 2;
+//	public int spinsStatus = 0;
+//
+//	public float totalRotation = 0.0f;
+//
+//	public float rotationAmt = 1000 * Time.deltaTime;
 
 	// Use this for initialization
 	void Start () {
@@ -92,6 +106,18 @@ public class CarScript : MonoBehaviour {
 		UpdateGear(relativeVelocity);
 
 	}
+
+
+	// message from ai to spin
+	void spinPlayer()
+	{	
+
+		carRigidbody.velocity = Vector3.zero;
+		carRigidbody.angularVelocity = Vector3.zero;
+
+		carRigidbody.AddTorque (Vector3.up * currentEnginePower * 1000000);
+	}
+
 	void applyBrake ()
 	{
 		if(Input.GetKey("space"))
@@ -169,7 +195,7 @@ public class CarScript : MonoBehaviour {
 		for (int i = 0; i < wheelTransform.Length; i++) 
 		{
 			bool frontWheel = (i < 2);
-			wheels[i] = new Wheel(wheelTransform[i], frontWheel, wfc);
+			wheels[i] = new Wheel(wheelTransform[i], frontWheel, wfc, wheelRatio);
 		}
 
 	}
@@ -318,6 +344,9 @@ public class CarScript : MonoBehaviour {
 		if(canSteer)
 		{
 			float turnRadius = 3.0f / Mathf.Sin((90 - (steer * 30)) * Mathf.Deg2Rad);
+			if(throttle < 0)
+				turnRadius *= -1;
+
 			float minMaxTurn = Utilitys.EvaluateSpeedToTurn(carRigidbody.velocity.magnitude, maxSpeed, minimumTurn, maximumTurn);
 			float turnSpeed = Mathf.Clamp(relativeVelocity.z / turnRadius, -minMaxTurn / 10, minMaxTurn / 10);
 

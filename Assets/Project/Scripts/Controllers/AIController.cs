@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class AIController : MonoBehaviour {
+public class AIController1 : MonoBehaviour {
 	public CarAI carPrefab;
 
 	private CarAI[] cars;
