@@ -10,7 +10,7 @@ public class ArrowController : MonoBehaviour {
 		transform.LookAt(target);
 	}
 
-	void changeTarget(Transform newtarget)
+	public void changeTarget(Transform newtarget)
 	{
 		target = newtarget;
 	}

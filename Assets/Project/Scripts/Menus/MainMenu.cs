@@ -7,9 +7,9 @@ public class MainMenu : MonoBehaviour {
 	private int screenW;
 	private int screenH;
 	
-	public float buttonW = 500f;
-	public float buttonH = 100f;
-	public float iconS = 100f;
+	public float buttonW = 300f;
+	public float buttonH = 60f;
+	public float iconS = 30f;
 	public float icontop;
 	public float iconleft;
 
@@ -17,7 +17,6 @@ public class MainMenu : MonoBehaviour {
 	private JSONController jsonController;
 	
 	public string[] buttonNames;
-	public int[] buttonLocations;
 	public Texture[] Icons;
 
 	void Start() {
@@ -26,7 +25,7 @@ public class MainMenu : MonoBehaviour {
 	}
 	
 	void OnGUI(){
-		float fullH = (0.5f * screenH) - buttonNames.Length * (buttonH + 10) / 2;
+		float fullH = (0.5f * screenH) - buttonNames.Length * (buttonH +4) / 2;
 		Rect buttonBox = new Rect ((0.5f * screenW) - buttonW/2, fullH, buttonW, buttonH);
 		
 		
@@ -43,8 +42,7 @@ public class MainMenu : MonoBehaviour {
 
 			if (GUI.Button(newButtonBox,buttonName, buttonStyle)) 
 			{
-				if(buttonLocations[i] != 0)
-					goToProgram(buttonLocations[i]);
+				goToProgram(buttonName);
 			}
 
 			if(Icons[i])
@@ -53,9 +51,8 @@ public class MainMenu : MonoBehaviour {
 		
 	}
 	
-	void goToProgram (int code)
+	void goToProgram (string code)
 	{
-		Debug.Log (code);
-		Application.LoadLevel(code);
+		GameObject.FindGameObjectWithTag ("MenuController").SendMessage ("setScene", code);
 	}
 }

@@ -17,6 +17,8 @@ public class PickCarColorMenu : MonoBehaviour {
 	public float offsetW = 0f;
 	public float offsetH = 0f;
 
+	public float buttonSpace = 0;
+
 	public int currentColor = 0;
 
 	void Start()
@@ -54,8 +56,13 @@ public class PickCarColorMenu : MonoBehaviour {
 
 			
 			Rect newButtonBox = buttonBox;
+
+			newButtonBox.y = buttonBox.y + i/2 * (buttonBox.height + 10);
 			
-			newButtonBox.y = buttonBox.y + i * (buttonBox.height + 10);
+			if(i%2 == 0)
+				newButtonBox.x += buttonSpace;
+			else
+				newButtonBox.x -= buttonSpace;
 
 			if (GUI.Button(newButtonBox,buttonName,currentBtnStyle)) 
 			{

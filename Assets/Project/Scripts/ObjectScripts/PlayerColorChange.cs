@@ -57,7 +57,7 @@ public class PlayerColorChange : MonoBehaviour {
 
 		int arrowColor = getColorCombo(carColor);
 
-		Debug.Log (carColor + " " + arrowColor);
+//		Debug.Log (carColor + " " + arrowColor);
 
 		if(carMaterals[carColor] != null && arrowMaterals[arrowColor] != null)
 		{

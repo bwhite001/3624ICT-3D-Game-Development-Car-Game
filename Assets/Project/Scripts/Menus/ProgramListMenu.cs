@@ -13,6 +13,8 @@ public class ProgramListMenu : MonoBehaviour {
 	public float bbuttonW = 500f;
 	public float bbuttonH = 100f;
 
+	public float buttonSpace;
+
 
 	public Rect backBtn;
 
@@ -42,7 +44,14 @@ public class ProgramListMenu : MonoBehaviour {
 
 			Rect newButtonBox = buttonBox;
 
-			newButtonBox.y = buttonBox.y + i * (buttonBox.height + 10);
+
+			newButtonBox.y = buttonBox.y + i/2 * (buttonBox.height + 10);
+
+			if(i%2 == 0)
+				newButtonBox.x += buttonSpace;
+			else
+				newButtonBox.x -= buttonSpace;
+
 
 			if (GUI.Button(newButtonBox,buttonName, buttonStyle)) 
 			{
@@ -58,7 +67,10 @@ public class ProgramListMenu : MonoBehaviour {
 		backBtn.x = (0.5f * screenW) - buttonW/1.5f;
 
 		if(GUI.Button(backBtn,"Back", backbuttonStyle))
-			Application.LoadLevel(0);
+		{
+			string menu = "MainMenu";
+			GameObject.FindGameObjectWithTag ("MenuController").SendMessage ("setScene", menu);
+		}
 
 	}
 
@@ -68,7 +80,8 @@ public class ProgramListMenu : MonoBehaviour {
 
 		if (ProgramObjectController.program != null) 
 		{
-			Application.LoadLevel(2);
+			string menu = "ColorPickMenu";
+			GameObject.FindGameObjectWithTag ("MenuController").SendMessage ("setScene", menu);
 		}
 	}
 }

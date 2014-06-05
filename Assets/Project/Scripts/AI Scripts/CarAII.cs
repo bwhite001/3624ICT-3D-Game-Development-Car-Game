@@ -26,9 +26,6 @@ public class CarAII : MonoBehaviour {
 
 	public float attackTime = 5.0f; //time between next attack
 	public float secondsTillNextAttack = 5.0f;
-	
-
-	private bool attackedPlayer = false;
 
 	public bool start = false;
 
@@ -165,17 +162,7 @@ public class CarAII : MonoBehaviour {
 	{
 		curState = FSMState.Patrol;
 	}
-
-//	protected void findNextPoint()
-//	{
-//		if(waypoints.Length > 0)
-//		{
-//			int rndIndex = Random.Range(0, waypoints.Length);
-//			//nav.SetDestination(waypoints[rndIndex].transform.position);
-//
-//			destPos = waypoints[rndIndex].transform.position;
-//		}
-//	}
+	
 	protected int findNextPoint()
 	{
 		if(waypoints.Length > 0)

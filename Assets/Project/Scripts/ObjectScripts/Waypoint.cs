@@ -3,20 +3,24 @@ using System.Collections;
 
 public class Waypoint : MonoBehaviour {
 
+	public bool selected;
+	public GameObject modelPrefab;
+	private GameObject model;
+
 	public string waypointName;
 
-	public bool selected = false;
-
-	private GameObject waypointController;
-	
 
 	// Use this for initialization
 	void Start () {
-		waypointController = GameObject.FindGameObjectWithTag("WaypointController");
+		model = Instantiate(modelPrefab, transform.position, Quaternion.identity) as GameObject;
+		model.name = "Model " + name;
+		model.transform.parent = transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		model.SetActive (selected);
 	
 	}
 
@@ -35,9 +39,9 @@ public class Waypoint : MonoBehaviour {
 		selected = select;
 	}
 
-	void setWaypointName(string name)
+	public string getName()
 	{
-		waypointName = name;
+		return waypointName;
 	}
 
 	public bool getSelected()
@@ -45,5 +49,8 @@ public class Waypoint : MonoBehaviour {
 		return selected;
 	}
 
-
+	public Transform getTransform()
+	{
+		return transform;
+	}
 }

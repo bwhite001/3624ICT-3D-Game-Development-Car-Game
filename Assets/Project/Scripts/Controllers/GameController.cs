@@ -5,28 +5,17 @@ using SimpleJSON;
 public class GameController : MonoBehaviour {
 
 	private WaypointController waypointController;
-	private AIController aiController;
-	private GUIController guiController;
+	private GUIBoxes guiController;
 	private InGameGUIController inGameGuiController;
 	private ArrowController arrowController;
 	private JSONController jsonController;
+	private TimingScript timer;
 
-	public int ammountOfWaypoints = 40;
-	public int ammountOfAi = 10;
+	private int failedGrades = 0;
 
-	private JSONNode CurrentProgram;
+	private Waypoint currentWaypoint;
 
-	private int pickMajorIndex;
-	private int pickMajorYear;
-
-	public int currentCourseIndex = 0;
-	public int currentYearIndex = 0;
-	private int completedCourses = 0;
-
-	private int[] endGameIndexs = {7,2};
-
-	private string[,] allCourses = new string[3,8];
-	private string currentCourse;
+	public GameObject Player;
 
 	void Start()
 	{
@@ -34,162 +23,192 @@ public class GameController : MonoBehaviour {
 
 		if (ProgramObjectController.program == null) 
 		{
-			//Application.LoadLevel(0);
 			Debug.Log("Program Not Defined!");
-			//Debug.Break();
+			jsonController.setCurrentProgram("1109BIT");
 
 		}
-		else
-		{
-			insertCore();
-			playerStart();
-		}
 
+		playerStart();
 	}
+
+	void Update()
+	{
+		getPlayerDist ();
+	}
+
+
 	void instantiateControllers()
 	{
-		aiController = GameObject.FindGameObjectWithTag ("AIController").GetComponent<AIController>();
+		jsonController = new JSONController();
+
+
+		Player = GameObject.FindGameObjectWithTag ("Player");
+
+		Player.SendMessage ("setCarColor", CarColors.getColor ());
+
+		arrowController = GameObject.FindGameObjectWithTag ("ArrowController").GetComponent<ArrowController>();
 		waypointController = GameObject.FindGameObjectWithTag ("WaypointController").GetComponent<WaypointController>();
-
-		waypointController.createWaypoints (ammountOfWaypoints);
-		aiController.createCars (ammountOfAi);
 		
-		guiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<GUIController>();
+		guiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<GUIBoxes>();
 
-		inGameGuiController = GameObject.FindGameObjectWithTag ("GUIController").GetComponent<InGameGUIController>();
+		inGameGuiController = GameObject.FindGameObjectWithTag ("InGameGUIController").GetComponent<InGameGUIController>();
 
-		guiController.setProgram (ProgramObjectController.getProgram(), null);
+		timer = gameObject.GetComponent<TimingScript>();
 	}
-
-	void insertCore()
-	{
-		string[] firstYear = ProgramObjectController.getCoreClasses (1);
-		string[] secondYear = ProgramObjectController.getCoreClasses (2);
-		string[] thirdYear = ProgramObjectController.getCoreClasses (3);
-
-		for (int i = 0; i<allCourses.GetLength(0); i++) 
-		{
-			for(int j = 0; j<allCourses.GetLength(1); j++)
-			{
-				string[] courseName = null;
-
-				if(i == 0)
-					courseName = firstYear;
-				else if(i == 1)
-					courseName = secondYear;
-				else if(i == 2)
-					courseName = thirdYear;
-
-				if(j < courseName.Length)
-				{
-					allCourses[i,j] = courseName[j];
-
-					//Debug.Log (courseName[j] + " @ " + i + "," + j);
-				}
-			}
-		}
-	}
-
+	
 	void playerStart()
 	{
-		waypointController.selectWaypoint();
+		currentWaypoint = waypointController.selectWaypoint();
 
-		currentCourseIndex = 0;
-		currentYearIndex = 0;
-		completedCourses = 0;
+		placePlayer ();
 
-		currentCourse = allCourses [0, 0];
+		string[] program = ProgramObjectController.getProgram();
+		guiController.currentProgram = program[0] + " - " + program[1];
+		guiController.currentMajor = "Undeclared";
 
-		updateGui ();
+		Courses.init();
 
+		guiController.newSemester();
 
+		Semester(true);
 	}
 
 	void updateGui()
 	{
-		Waypoint waypoint = waypointController.getSelectedWaypoint();
-		guiController.setLocation (waypoint.waypointName);
-		guiController.setCourse (currentCourse);
-		guiController.setInfo (currentYearIndex + 1,(currentCourseIndex/4 +1), completedCourses);
+		arrowController.changeTarget(currentWaypoint.transform);
+
+		guiController.currentCourseIndex = Courses.currentCourse;
+		Vector2 place = Courses.getYearTime();
+		guiController.currentSemester = (int)place.x;
+		guiController.currentYear = (int)place.y;
+		guiController.currentGPA = GPAScoring.calulateGPA();
+
+
+		string[] course = Courses.getCurrentCourse();
+
+		guiController.currentCourse = course[0] + " - " + course[1];
+		guiController.currentBuilding = currentWaypoint.getName();
+
+		timer.setTime(Vector3.Distance(Player.transform.position, currentWaypoint.transform.position));
+		timer.startTimer();
+
 	}
 
 	public void playerAtWaypoint()
 	{
-		if (currentCourseIndex >= endGameIndexs [0] && currentYearIndex >= endGameIndexs [1])
+		currentWaypoint.selected = false;
+
+		waypointController.selectWaypoint();
+		currentWaypoint = waypointController.getSelectedWaypoint ();
+		string[] course = Courses.getCurrentCourse();
+
+		if(Courses.currentCourse < 3)
 		{
-			endGame ();
-			return;
-		}
-		int tmpI = currentYearIndex;
-		int tmpJ = currentCourseIndex + 1;
+			int grade = getGrade();
+			timer.pauseTimer();
 
-		if(currentCourseIndex >= allCourses.GetLength(1)-1)
-		{
-			tmpI = currentYearIndex+1;
-			tmpJ = 0;
-		}
+			GPAScoring.addScore(Courses.currentCourse,Courses.currentSemseter, grade, course);
 
-		completedCourses++;
+			guiController.semesterGrades[Courses.currentCourse] = grade+"";
 
-		if (allCourses [tmpI, tmpJ] == null)
-		{
-			inGameGuiController.displayMajorMenu(ProgramObjectController.getMajors(), true);
-			return;
-		}
+			Courses.currentCourse++;
 
-
-		if(currentCourseIndex >= allCourses.GetLength(1)-1)
-		{
-			currentYearIndex++;
-			currentCourseIndex = 0;
+			updateGui();
 		}
 		else
-			currentCourseIndex++;
-
-
-
-		currentCourse = allCourses[currentYearIndex, currentCourseIndex];
-		waypointController.SendMessage ("selectWaypoint");
-		updateGui();
-
-	}
-
-	void selectMajor(string majorName)
-	{
-		Debug.Log (majorName);
-
-		ProgramObjectController.setAndComeBack (majorName);
-
-
-
-	}
-
-	void setMajorCourses(string[] majorCourses)
-	{
-		string majorName = ProgramObjectController.getMajorName ();
-
-		int index = 0;
-		
-		for (int i = 0; i<allCourses.GetLength(0); i++) 
 		{
-			for(int j = 0; j<allCourses.GetLength(1); j++)
+			Semester(false);
+		}
+	}
+
+	public void playerFailedCourse()
+	{
+		if(failedGrades < 3)
+		{
+			currentWaypoint.selected = false;
+			
+			waypointController.selectWaypoint();
+
+			currentWaypoint = waypointController.getSelectedWaypoint ();
+			string[] course = Courses.getCurrentCourse();
+			
+			if(Courses.currentCourse < 3)
 			{
-				if(allCourses[i,j] == null && majorCourses[index] != null)
-				{
-					Debug.Log(i + " " + j + " " + index);
-					Debug.Log (majorCourses[index]);
-					index++;
-				}
+				int grade = 3;
+				timer.stopTimer();
 				
+				GPAScoring.addScore(Courses.currentCourse,Courses.currentSemseter, grade, course);
+				
+				guiController.semesterGrades[Courses.currentCourse] = "F";
+				
+				Courses.currentCourse++;
+				
+				updateGui();
 			}
+			else
+			{
+				Semester(false);
+			}
+			failedGrades++;
+		}
+		else
+		{
+			inGameGuiController.currentMenu = 4;
+			inGameGuiController.showMenu = true;
+		}
+	}
+
+	void placePlayer()
+	{
+		GameObject[] StartingPoints = GameObject.FindGameObjectsWithTag("StartingPoint");
+
+		int index = (int)Random.Range (0, StartingPoints.Length - 1);
+
+		Player.transform.position = StartingPoints [index].transform.position;
+
+		Player.transform.LookAt (currentWaypoint.transform);
+	}
+
+	void getPlayerDist(
+	{
+		float dist = Vector3.Distance(Player.transform.position, currentWaypoint.transform.position);
+
+		if(dist <= 10)
+		{
+			playerAtWaypoint();
 		}
 
-		playerAtWaypoint ();
-		guiController.setProgram (ProgramObjectController.getProgram(), majorName);
+		guiController.setPercent(timer.timePercentage, timer.currentTime);
+
+		if(timer.timePercentage == 0)
+		{
+			playerFailedCourse();
+		}
 	}
 
-	void endGame()
+	void Semester(bool start)
 	{
-		Application.LoadLevel (2);
+		int menu = (start) ? 0 : 3;
+		inGameGuiController.currentMenu = menu;
+		inGameGuiController.showMenu = true;
+	}
+
+	int getGrade()
+	{
+		return (int)(Mathf.Ceil((GPAScoring.maxGrade - GPAScoring.minGrade) * timer.timePercentage) + GPAScoring.minGrade);
+	}
+
+	public void playerInGame()
+	{
+		updateGui();
+	}
+
+	public void playerPaused()
+	{
+		timer.pauseTimer();
+	}
+	public void playerUnPaused()
+	{
+		timer.startTimer();
 	}
 }

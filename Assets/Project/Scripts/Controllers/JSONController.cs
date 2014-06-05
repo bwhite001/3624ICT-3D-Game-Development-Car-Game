@@ -3,7 +3,7 @@ using System.Collections;
 using SimpleJSON;
 using System.IO;
 
-public class JSONController : MonoBehaviour {
+public class JSONController {
 	public TextAsset file;
 	private JSONNode programs;
 	private string filePath = "programs";

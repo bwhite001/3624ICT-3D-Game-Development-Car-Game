@@ -8,7 +8,6 @@ public class CarScript : MonoBehaviour {
 	private Vector3 accel;
 	public float throttle;
 	private float steer = 0;
-	private bool handbrake = false;
 
 	public float wheelRatio = 3;
 
@@ -16,7 +15,6 @@ public class CarScript : MonoBehaviour {
 	public Rigidbody carRigidbody;
 
 	private Vector3 dragMultiplier = new Vector3(2, 5, 1);
-	private float initialDragMultiplierX = 10.0f;
 	public float handbrakeApplyr = 10;
 
 	private float resetTimer  = 0.0f;
@@ -66,14 +64,6 @@ public class CarScript : MonoBehaviour {
 	public float attackInterval = 5.0f;
 	public float noOfSec = 0.0f;
 
-//	public int totalSpin = 2;
-//	public int spinsStatus = 0;
-//
-//	public float totalRotation = 0.0f;
-//
-//	public float rotationAmt = 1000 * Time.deltaTime;
-
-	// Use this for initialization
 	void Start () {
 
 		initialization();
@@ -81,6 +71,7 @@ public class CarScript : MonoBehaviour {
 		setUpWheelFrictionCurve();
 
 	}
+
 	void setUpWheelFrictionCurve()
 	{
 		wfc.extremumSlip = 1;
@@ -99,9 +90,6 @@ public class CarScript : MonoBehaviour {
 		Check_If_Car_Is_Flipped();
 
 		applyBrake ();
-
-		if(throttle == 0 && currentEnginePower <= 0)
-			carRigidbody.velocity = new Vector3 (0, carRigidbody.velocity.y, 0);
 
 		UpdateGear(relativeVelocity);
 
@@ -241,6 +229,23 @@ public class CarScript : MonoBehaviour {
 		currentEnginePower = 0;
 	}
 
+	public void pauseCar()
+	{
+		carRigidbody.velocity = Vector3.zero;
+		carRigidbody.angularVelocity = Vector3.zero;
+		currentEnginePower = 0;
+	}
+
+	public Vector3[] getCarState()
+	{
+		return new Vector3[2] {carRigidbody.velocity, carRigidbody.angularVelocity};
+	}
+	public void setCarState(Vector3[] states)
+	{
+		carRigidbody.velocity = states[0];
+		carRigidbody.angularVelocity = states[1];
+	}
+
 	void UpdateDrag(Vector3 relativeVelocity)
 	{
 		Vector3 relativeDrag = new Vector3(	-relativeVelocity.x * Mathf.Abs(relativeVelocity.x), 
@@ -344,8 +349,6 @@ public class CarScript : MonoBehaviour {
 		if(canSteer)
 		{
 			float turnRadius = 3.0f / Mathf.Sin((90 - (steer * 30)) * Mathf.Deg2Rad);
-			if(throttle < 0)
-				turnRadius *= -1;
 
 			float minMaxTurn = Utilitys.EvaluateSpeedToTurn(carRigidbody.velocity.magnitude, maxSpeed, minimumTurn, maximumTurn);
 			float turnSpeed = Mathf.Clamp(relativeVelocity.z / turnRadius, -minMaxTurn / 10, minMaxTurn / 10);
